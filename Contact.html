@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <script>
+        const form = document.querySelector('#contact form');
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  const formData = new FormData(form);
+
+  fetch(form.action, {
+    method: form.method,}
+  }</script>
+     
+  </head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    
+    }
+    
+    .main{
+        width: auto;
+        background: linear-gradient(to top,rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(R.jpg);
+        background-position: center;
+        background-size: cover; 
+        height: 1000px;
+    
+    }
+    
+    .navbar{
+        width: 1500px;
+        height: 75px;
+        margin: auto;
+    }
+    
+    .icon{
+        width: 500px;
+        float: left;
+        height: 70px;
+    
+    }
+    
+    .logo{
+    color: white;
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    padding-left: 10px;
+    float: left;
+    padding-top: 10px;
+    
+    }
+    
+    .menu{
+        width: 400px;
+        float: left;
+        height: 70px;
+    
+    }
+    
+    ul{
+        float: left;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+    }
+    
+    ul li{
+        list-style: none;
+        margin-left: 75px;
+        margin-top: 30px;
+        font-size: 21px;
+    }
+    
+    ul li a{
+        text-decoration: none;
+        color: whitesmoke;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: bold;
+        transition: 0.4s ease-in-out;
+    }
+    
+    ul li a:hover{
+        color: blue;
+    }
+
+   
+
+
+#contact h2 {
+  text-align: left;
+  font-size: 36px;
+  color: white;
+  margin-bottom: 100px;
+}
+
+#contact p {
+  text-align: left;
+  font-size: 40%;
+  color: white;
+  font-size: 18px;
+  vertical-align: bottom;
+}
+
+
+#contact form label {
+  display: block;
+  font-size: 18px;
+  color: whitesmoke;
+  margin-bottom: 10px;
+}
+
+#contact form input[type="text"],
+#contact form input[type="email"],
+#contact form textarea {
+  width: 50%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color:whitesmoke;
+}
+
+#contact form textarea {
+  height: 150px;
+}
+
+#contact form button[type="submit"] {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  background-color: blue;
+  color: #fff;
+  cursor: pointer;
+}
+    </style>
+<body>
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h1 class="logo">CureMed Pharmacy</h1>
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Service.html">Service</a></li>
+                    <li><a href="Products.html">Products</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    
+                </ul>
+            </div>   
+            
+            <section id="contact">
+                <div class="container">
+                  <h2>Contact Us</h2>
+                  <p>Get in touch with us using one of the following methods:</p><br>
+                  <p class="fas fa-phone"><a href="tel:+233-245-86-0243">+233-245-86-0243</a><br><br><a href="mailto:info@curemedpharmacy.com">mailto:info@curemedpharmacy.com</a><br><br>You Can Locate Us at:  123 Main St, Dansoman Roundabout near Magret Mary School
+                  <form action="submit-contact-form.php" method="POST">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message"></textarea>
+                    <button type="submit">Send Message</button>
+                  </form>
+                </div>
+              </section>
+</body>
+</html>
